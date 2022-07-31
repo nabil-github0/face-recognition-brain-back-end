@@ -4,6 +4,6 @@
 
 #### `npm install`
 
-### The to have the nodemon server running in you localhost ... run:
+### To to have the nodemon server running in you localhost ... run:
 
 #### `npm start`
