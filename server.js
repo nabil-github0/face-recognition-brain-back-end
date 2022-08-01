@@ -23,6 +23,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {res.send("It is working!")});
+
 app.post("/signIn", (req, res) => {signIn.handleSignIn(req, res, knex, bcrypt)});
 
 app.post("/register", (req, res) => {register.handleRegister(req, res, knex, bcrypt)});
