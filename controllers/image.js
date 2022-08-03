@@ -3,7 +3,7 @@ const {ClarifaiStub, grpc} = require("clarifai-nodejs-grpc");
 const stub = ClarifaiStub.grpc();
 
 const metadata = new grpc.Metadata();
-metadata.set("authorization", "Key" + process.env.API_KEY_CLARIFAI)
+metadata.set("authorization", `Key ${process.env.API_KEY_CLARIFAI}`)
 // const clarifai = require("clarifai");
 // console.log(clarifai);
 
@@ -14,7 +14,7 @@ const handleApiCall = (req, res) => {
 stub.PostModelOutputs(
   {
       // This is the model ID of a publicly available General model. You may use any other public or custom model ID.
-      model_id: FACE_DETECT_MODEL,
+      model_id: "a403429f2ddf4b49b307e318f00e528b",
       inputs: [{data: {image: {url: req.body.input}}}]
   },
   metadata,
